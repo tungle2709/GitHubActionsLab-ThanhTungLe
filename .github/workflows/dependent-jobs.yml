@@ -9,28 +9,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Building application
-        run: |
-          echo "Building application..."
-          sleep 3
+        run: echo "Building application..."
+      - name: Simulate build
+        run: sleep 3
 
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Running tests
-        run: |
-          echo "Running tests..."
-          sleep 3
+        run: echo "Running tests..."
+      - name: Simulate testing
+        run: sleep 3
 
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Deploying application
-        run: |
-          echo "Deploying application..."
-          sleep 3
+        run: echo "Deploying application..."
+      - name: Simulate deployment
+        run: sleep 3

@@ -9,35 +9,32 @@ jobs:
   ubuntu-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Print OS information
         run: uname -a
       - name: Create and display file
         run: |
-          echo "Hello from Ubuntu" > ubuntu-test.txt
-          cat ubuntu-test.txt
+          echo "Hello from Ubuntu" > test.txt
+          cat test.txt
 
   windows-job:
     runs-on: windows-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Print OS information
-        run: systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+        run: systeminfo | findstr /B /C:"OS Name"
       - name: Create and display file
         run: |
-          echo "Hello from Windows" > windows-test.txt
-          type windows-test.txt
+          echo Hello from Windows > test.txt
+          type test.txt
 
   macos-job:
     runs-on: macos-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Print OS information
         run: uname -a
       - name: Create and display file
         run: |
-          echo "Hello from macOS" > macos-test.txt
-          cat macos-test.txt
+          echo "Hello from macOS" > test.txt
+          cat test.txt
