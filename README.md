@@ -11,14 +11,14 @@ Repository: https://github.com/tungle2709/GitHubActionsLab-ThanhTungLe
 **Trigger:** Push to main branch
 
 **Execution Flow:**
-1. `job_on_ubuntu` and `job_on_windows` run in parallel
-2. `job_on_macos` runs after both complete
-3. `Final_job` runs after macOS job completes
+1. `build` job runs first
+2. `test` job runs after build completes
+3. `deploy` job runs after test completes
 
 **Key Concepts:**
 - `needs`: Creates job dependencies
 - `runs-on`: Specifies runner OS
-- Jobs without `needs` run in parallel
+- Sequential execution: build → test → deploy
 
 ### Workflow 2: multi-platform (multi-platform.yml)
 
@@ -32,6 +32,17 @@ Repository: https://github.com/tungle2709/GitHubActionsLab-ThanhTungLe
 - No `needs` keyword means parallel execution
 - `actions/checkout@v4`: Checks out code
 - OS-specific commands
+
+### Workflow 3: Java CI with Maven (maven.yml)
+
+**Purpose:** Builds Java project with Maven.
+
+**Trigger:** Push and pull requests to main branch
+
+**Key Concepts:**
+- Maven build automation
+- JDK 17 setup
+- Dependency caching
 
 ## Challenges
 
