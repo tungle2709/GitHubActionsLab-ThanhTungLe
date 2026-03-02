@@ -6,32 +6,31 @@ on:
       - main
 
 jobs:
-  job_on_ubuntu:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - run: date
+      - uses: actions/checkout@v4
+      - name: Building application
+        run: |
+          echo "Building application..."
+          sleep 3
 
-  job_on_windows:
-    name: A windows job
-    runs-on: windows-latest
-    steps:
-      - name: First step in windows job
-        run: date
-
-  job_on_macos:
-    needs: [job_on_ubuntu, job_on_windows]
-    runs-on: macos-latest
-    name: A job that runs on Mac after first two jobs
-    steps:
-      - run: pwd
-      - name: new step
-        run: ls
-      - name: third step
-        run: env
-
-  Final_job:
-    needs: job_on_macos
+  test:
+    needs: build
     runs-on: ubuntu-latest
-    name: A Final job
     steps:
-      - run: echo Hello World!
+      - uses: actions/checkout@v4
+      - name: Running tests
+        run: |
+          echo "Running tests..."
+          sleep 3
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploying application
+        run: |
+          echo "Deploying application..."
+          sleep 3
