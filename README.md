@@ -33,17 +33,6 @@ Repository: https://github.com/tungle2709/GitHubActionsLab-ThanhTungLe
 - `actions/checkout@v4`: Checks out code
 - OS-specific commands
 
-### Workflow 3: Java CI with Maven (maven.yml)
-
-**Purpose:** Builds Java project with Maven.
-
-**Trigger:** Push and pull requests to main branch
-
-**Key Concepts:**
-- Maven build automation
-- JDK 17 setup
-- Dependency caching
-
 ## Key Concepts Demonstrated
 
 ### needs
