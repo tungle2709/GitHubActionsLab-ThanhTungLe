@@ -1,9 +1,8 @@
-name: dependent jobs
+name: dependent-jobs
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build:
@@ -12,7 +11,7 @@ jobs:
       - name: Building application
         run: echo "Building application..."
       - name: Simulate build
-        run: sleep 3
+        run: sleep 5
 
   test:
     needs: build
