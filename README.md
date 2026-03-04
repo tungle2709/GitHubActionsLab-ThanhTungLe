@@ -2,6 +2,10 @@
 
 Repository: https://github.com/tungle2709/GitHubActionsLab-ThanhTungLe
 
+## Testing Multi-Platform Workflow
+
+This branch is for testing the multi-platform workflow with pull requests.
+
 ## Workflows
 
 ### Workflow 1: dependent jobs (dependent-jobs.yml)
