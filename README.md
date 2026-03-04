@@ -1,6 +1,7 @@
 # GitHub Actions Lab - Thanh Tung Le
 
-Repository: https://github.com/tungle2709/GitHubActionsLab-ThanhTungLe
+Full name: Thanh Tung Le
+Student ID: 991751027
 
 ## Workflows
 
@@ -49,8 +50,8 @@ Defines environment variables at workflow, job, or step level. Can be used to co
 
 ## Challenges
 
-**Challenge:** Understanding job dependencies vs parallel execution  
+**Challenge:** I was not really understand job dependencies vs parallel execution  
 **Solution:** Using `needs` creates dependencies; omitting it allows parallel execution.
 
-**Challenge:** OS-specific commands in multi-platform workflow  
+**Challenge:** I don't know all OS-specific commands in multi-platform workflow  
 **Solution:** Used appropriate commands for each OS (uname for Unix-like systems, systeminfo for Windows).
