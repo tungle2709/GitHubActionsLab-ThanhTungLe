@@ -3,6 +3,10 @@
 Full name: Thanh Tung Le
 Student ID: 991751027
 
+## Testing Workflow 2 - Multi-Platform Testing
+
+This branch tests the multi-platform workflow to verify all three OS jobs run in parallel.
+
 ## Workflows
 
 ### Workflow 1: dependent jobs (dependent-jobs.yml)
